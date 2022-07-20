@@ -28,7 +28,7 @@ jobs:
 
       - name: Clone The Secret Mirror Repository
         run: |
-          git clone https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.REMPO }}
+          git clone https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.REMPO }} source
 
       - name: Compile The Mirroring Docker Container
         run: |
