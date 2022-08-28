@@ -43,7 +43,7 @@ jobs:
         timeout-minutes: 340
         continue-on-error: true
         run: |
-          parallel -u ::: 'docker run --privileged --rm -i mirror-bot' 'git clone https://github.com/${GITHUB_REPOSITORY} clean && cd clean && sudo bash cleanup.sh' 'docker image rm -f rootgamer/anus'
+          parallel -u ::: 'docker run --privileged --rm -i mirror-bot' 'git clone https://github.com/${GITHUB_REPOSITORY} clean && cd clean && sudo bash cleanup.sh' 'docker ps -a && docker rm 7c'
 
       - name: Loop Workflow
         continue-on-error: true
